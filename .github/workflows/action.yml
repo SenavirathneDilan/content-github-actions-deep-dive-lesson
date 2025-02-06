@@ -16,13 +16,13 @@ jobs:
                 python-version: 3.11
             - name: install libraries
               run: |
-              cd function
-              python -m pip install --upgrade pip
-              if [ -f requirments.txt ]; then pip install -r requirments.txt -t .; fi
+                cd function
+                python -m pip install --upgrade pip
+                if [ -f requirments.txt ]; then pip install -r requirments.txt -t .; fi
             - name: create a zip bundle
               run: |
-              cd function
-              zip -r ../${{ github.sha }}.zip .
+                cd function
+                zip -r ../${{ github.sha }}.zip .
 
             - name: Archive artifact
               uses: actions/upload-artifact@v2
