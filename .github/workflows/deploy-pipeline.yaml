@@ -105,5 +105,5 @@ jobs:
            aws lambda update-function-code \
              --function-name py-test
              --s3-bucket teir2-data-flink-c32e32rd
-             --s3-key ${{ github.sha }}.zip
+             --zip-file ${{ github.sha }}.zip
              --publish 
