@@ -103,7 +103,6 @@ jobs:
        - name: update function code
          run: |
            aws lambda update-function-code \
-             --function-name py-test
-             --s3-bucket teir2-data-flink-c32e32rd
-             --zip-file ${{ github.sha }}.zip
-             --publish 
+           --function-name py-test \
+           --zip-file fileb://${{ github.sha }}.zip \
+           --publish
