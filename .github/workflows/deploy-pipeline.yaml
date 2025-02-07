@@ -112,7 +112,7 @@ jobs:
     needs: lint
     steps:
       - name: check out code
-        uses:  actions/chekout@v4
+        uses:  actions/chekout@v2
       - name: create doc folder
         run: mkdir docs
       - name: converrt mk to html
